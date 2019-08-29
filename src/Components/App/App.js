@@ -17,6 +17,7 @@ class App extends Component {
       .then(purchases => this.setState({ purchases }))
       .catch(error => console.log(error))
   }
+
   
   render() {
     const { purchases } = this.state;
