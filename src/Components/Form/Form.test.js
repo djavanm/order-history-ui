@@ -18,4 +18,14 @@ describe('Form' , () => {
     />)
     expect(wrapper).toMatchSnapshot();
   })
+
+  it('should call the postNewPurchase method when clicked', () => {
+    const postNewPurchaseMock = jest.fn();
+    const wrapper = shallow(<Form postNewPurchase={postNewPurchaseMock}
+    />)
+    wrapper.find('button').simulate('click', {
+      preventDefault: jest.fn()
+    });
+    expect(postNewPurchaseMock).toHaveBeenCalled();
+  })
 });
