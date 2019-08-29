@@ -30,7 +30,8 @@ class Form extends Component {
   }
 
   createNewPurchase = () => {
-    const { url, name, description, price, } = this.state;
+    const { url, name, description, price, resetForm } = this.state;
+    const { postNewPurchase } = this.props;
     const newPurchase = {
       id: Date.now(),
       img: url,
@@ -38,7 +39,8 @@ class Form extends Component {
       description: description,
       price: price
     }
-    
+    resetForm();
+    postNewPurchase(newPurchase);
   }
 
   render() {
@@ -80,7 +82,7 @@ class Form extends Component {
         <button
         type="submit"
         className="form-button"
-        onClick={() => console.log('hi')}
+        onClick={this.state.createNewPurchase()}
         >
         Add Purchase
         </button>

@@ -9,14 +9,14 @@ export const getPurchases = () => {
     .catch(error => Error(error.message))
 }
 
-export const addPurchase = ({id, img, name, description, price}) => {
-  const options = { 
-    id: id,
-    img: img, 
-    name: name, 
-    description: description, 
-    price: price
-  }
+export const addPurchase = (newPurchase) => {
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(newPurchase),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
 
   return fetch('http://localhost:3001/api/v1/purchases', options)
     .then(res => {
