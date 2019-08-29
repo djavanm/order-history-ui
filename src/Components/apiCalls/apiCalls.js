@@ -27,3 +27,18 @@ export const postPurchase = (newPurchase) => {
     })
     .catch(error => Error(error.message))
 }
+
+export const removePurchase = (id) => {
+  const options = {
+    method: 'DELETE',
+  }
+  
+  return fetch(`http://localhost:3001/api/v1/purchases/${id}`, options)
+    .then(res => {
+      if(!res.ok) {
+        throw new Error('There was a problem with the server')
+      }
+      return res.json()
+    })
+    .catch(error => Error(error.message))
+}

@@ -32,3 +32,13 @@ p {
   font-size: 1em;
   margin-top: 40px;
 }
+
+.delete-button {
+  background: red;
+  color: white;
+  border-radius: 2px;
+  height: 80px;
+  width: 200px;
+  font-size: 1em;
+  font-weight: bold;
+}

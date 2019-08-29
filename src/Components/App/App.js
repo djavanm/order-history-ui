@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getPurchases, postPurchase } from '../apiCalls/apiCalls.js';
+import { getPurchases, postPurchase, removePurchase } from '../apiCalls/apiCalls.js';
 import Container from '../Container/Container.js';
 import Form from '../Form/Form.js';
 
@@ -26,6 +26,14 @@ class App extends Component {
       }))
       .catch(error => console.log(error))
   } 
+
+  deleteOldPurchase = (e, id) => {
+    e.preventDefault();
+    removePurchase(id)
+    .then(purchases => this.setState({ purchases }))
+    .catch(error => console.log(error))
+  
+  }
   
   render() {
     const { purchases } = this.state;
@@ -39,7 +47,7 @@ class App extends Component {
             <Form postNewPurchase={this.postNewPurchase} />
           </div>
         </header>
-        <Container purchases={purchases} />
+        <Container purchases={purchases} deleteOldPurchase={this.deleteOldPurchase}/>
     
       </div>
     );
