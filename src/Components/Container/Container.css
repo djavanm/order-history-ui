@@ -1,0 +1,6 @@
+section {
+  min-height: 700px;
+  background:#CECECE;
+  display: flex;
+  flex-direction: column;
+}

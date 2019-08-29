@@ -30,9 +30,8 @@ class App extends Component {
 
           </div>
         </header>
-        <div className='purchase-container'>
         <Container purchases={purchases} />
-        </div>
+    
       </div>
     );
   }

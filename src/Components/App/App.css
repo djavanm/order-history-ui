@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .App {
   text-align: center;
@@ -29,12 +29,4 @@ h1 {
   justify-content: space-around;
   height: 100%;
   width: 50%;
-}
-
-.purchase-container {
-  min-height: 700px;
-  background:#CECECE;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
