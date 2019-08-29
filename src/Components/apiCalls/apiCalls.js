@@ -9,7 +9,7 @@ export const getPurchases = () => {
     .catch(error => Error(error.message))
 }
 
-export const addPurchase = (newPurchase) => {
+export const postPurchase = (newPurchase) => {
   const options = {
     method: 'POST',
     body: JSON.stringify(newPurchase),
