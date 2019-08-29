@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { getPurchases } from '../apiCalls/apiCalls.js';
 import Container from '../Container/Container.js';
+import Form from '../Form/Form.js';
 
 class App extends Component {
   constructor() {
@@ -28,7 +29,7 @@ class App extends Component {
         <header>
           <h1 className='app-title'>My Order History</h1>
           <div className='purchase-form'>
-
+            <Form />
           </div>
         </header>
         <Container purchases={purchases} />
