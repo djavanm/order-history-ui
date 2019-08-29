@@ -1,8 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
+import { getPurchases } from '../apiCalls/apiCalls.js';
+import Container from '../Container/Container.js';
 
 class App extends Component {
+  constructor() {
+    super() 
+    
+    this.state = {
+      purchases: []
+    }
+  }
+
+  componentDidMount() {
+    getPurchases()
+      .then(purchases => this.setState({ purchases }))
+      .catch(error => console.log(error))
+  }
+  
   render() {
+    const { purchases } = this.state;
+    console.log(purchases)
+
     return (
       <div className="App">
         <header>
@@ -12,7 +31,7 @@ class App extends Component {
           </div>
         </header>
         <div className='purchase-container'>
-
+        <Container purchases={purchases} />
         </div>
       </div>
     );
