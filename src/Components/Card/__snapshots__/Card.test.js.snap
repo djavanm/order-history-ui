@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with the mock data 1`] = `
+<article
+  className="purchase-card"
+>
+  <div
+    className="purchase-image"
+  >
+    <img
+      alt="Djavan that was bought"
+      src="random corner of the internet"
+    />
+  </div>
+  <div
+    className="purchase-info"
+  >
+    <h3>
+      Djavan
+    </h3>
+    <p>
+      Description: 
+      Great for the whole family
+    </p>
+  </div>
+  <div
+    className="purchase-price"
+  >
+    <h3>
+      Price 
+      9999
+    </h3>
+  </div>
+</article>
+`;

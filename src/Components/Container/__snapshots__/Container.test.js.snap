@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should match the snapshot with the mock data 1`] = `
+<section>
+  <Card
+    key="1"
+    purchase={
+      Object {
+        "description": "Great for the whole family",
+        "id": 1,
+        "img": "random corner of the internet",
+        "name": "Djavan",
+        "price": 9999,
+      }
+    }
+  />
+</section>
+`;
