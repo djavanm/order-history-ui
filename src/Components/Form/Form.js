@@ -20,6 +20,27 @@ class Form extends Component {
     })
   }
 
+  resetForm = () => {
+    this.setState({
+      url: '',
+      name: '',
+      description: '',
+      price: '',
+    })
+  }
+
+  createNewPurchase = () => {
+    const { url, name, description, price, } = this.state;
+    const newPurchase = {
+      id: Date.now(),
+      img: url,
+      name: name, 
+      description: description,
+      price: price
+    }
+    
+  }
+
   render() {
     const {url, name, description, price} = this.state;
     return ( 
